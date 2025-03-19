@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <title>פאר טסי - מנורה</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="songs.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="page">
+      <div id="page-wrapper">
+        <div id="top-bar-wrapper">
+          <div id="top-bar">
+            <div class="flex-items menu-item">יצירת קשר</div>
+            <div class="flex-items menu-item">הופעות</div>
+            <div class="flex-items menu-item">חנות</div>
+            <div class="flex-items menu-item">דף הבית</div>
+         
+          </div>
+
+        </div>
+        <div id="main-wrapper">
+          <div id="main">
+            <div id="left"></div>
+            <div id="center">
+              <div id="album-info-wrapper">
+                <div id="album-art">
+                  <img src="images/tasi.png" alt="Album Art">
+                </div>
+                <div id="album-info">
+                  <div id="album-title">פאר טסי - מנורה</div>
+                  <div id="tracks-info">20 Tracks, 80m 40s</div>
+                  <div id="play-but-wrapper">
+                    <button id="start-play-button">נגן</button>
+                  </div>
+                </div>
+
+              </div>
+              <div id="playlist-wrapper">
+              </div>
+              <div id="player">
+                <div id="player-info">
+                  <img src="images/tasi.png" alt="Album Art">
+                  <div id="player-info-text">
+                    <div id="player-title">פאר טסי - מנורה</div>
+                    <!-- <div id="player-artist">פאר טסי</div> -->
+                  </div>
+                </div>
+                <div id="player-controls">
+                  <div id="player-buttons">
+                    <div id="prev-button" class="player-button">
+                      <img src="images/prev-track-but.png" alt="Previous Track">
+                    </div>
+                    <div id="player-play-but-wrapper">
+                      <div id="play-button" class="player-button"></div>
+                    </div>
+                    <div id="next-button" class="player-button">
+                      <img src="images/next-track-but.png" alt="Next Track">
+                    </div>
+                  </div>
+                  <div id="player-progress">
+                    <div id="progress-bar">
+                      <div id="progress"></div>
+                    </div>
+                    <div id="time-info">0:00 / 0:00</div>
+                  </div>
+                </div>
+                <div id="player-right">
+                  <div id="volume-wrapper">
+                    <img id="volume-icon" src="images/volume-icon.png" alt="Volume Icon">
+                    <input type="range" id="volume-fader" min="0" max="1" step="0.01" value="0.8" title="Volume">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="right"></div>
+          </div>
+
+      </div>
+    </div>
+
+</body>
+</html>

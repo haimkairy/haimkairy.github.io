@@ -1,0 +1,100 @@
+<mxfile host="65bd71144e">
+    <diagram id="BpkGXkBl3YZg-mkzK99H" name="Page-1">
+        <mxGraphModel dx="570" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="29" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry y="650" width="850" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry width="850" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="cover" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="11.486486486486488" y="15" width="137.83783783783784" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="song name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="160.8108108108108" y="15" width="149.32432432432432" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="252.7027027027027" y="80" width="402.02702702702703" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="volume" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="700.6756756756757" y="60" width="143.5810810810811" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="group" vertex="1" connectable="0" parent="29">
+                    <mxGeometry x="321.6216216216216" y="10" width="223.98648648648648" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22">
+                    <mxGeometry width="223.98648648648648" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&amp;lt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22">
+                    <mxGeometry x="11.486486486486488" y="10" width="57.432432432432435" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="play/ps" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22">
+                    <mxGeometry x="86.14864864864865" y="10" width="57.432432432432435" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22">
+                    <mxGeometry x="155.06756756756758" y="10" width="57.432432432432435" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="264.1891891891892" y="90" width="45.94594594594595" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="597.2972972972973" y="90" width="45.94594594594595" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="321.6216216216216" y="90" width="264.1891891891892" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="29">
+                    <mxGeometry x="402.02702702702703" y="90" width="45.94594594594595" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" edge="1" parent="29" source="24" target="27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="70" y="160" width="700" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry width="700" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="35" y="15.932203389830509" width="647.5" height="119.49152542372882" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="35" y="143.38983050847457" width="647.5" height="310.6779661016949" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="52.5" y="151.35593220338984" width="621.25" height="71.69491525423729" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="album cover" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="43.75" y="23.89830508474576" width="148.75" height="103.5593220338983" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="album title" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="210" y="39.83050847457627" width="262.5" height="31.864406779661017" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="trak and time" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="210" y="79.66101694915254" width="140" height="15.932203389830509" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="play" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="210" y="103.5593220338983" width="140" height="15.932203389830509" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="61.25" y="163.3050847457627" width="43.75" height="47.79661016949152" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="time" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="621.25" y="163.3050847457627" width="43.75" height="47.79661016949152" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="song name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="30">
+                    <mxGeometry x="113.75" y="163.3050847457627" width="490" height="43.813559322033896" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="160" width="50" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="160" width="50" height="480" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

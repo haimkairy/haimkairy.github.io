@@ -1,0 +1,712 @@
+:root {
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+  --sar: env(safe-area-inset-right);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 100%; */
+  box-sizing: border-box;
+  color:#fff;
+
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+  background: radial-gradient(circle, rgba(86,183,255,1) 0%, rgba(0,88,134,1) 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: var(--sat) var(--sar) var(--sab) var(--sal);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+}
+html {
+  height: -webkit-fill-available;
+}
+
+#page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, transparent 0, #000212 340px);
+  position: relative;
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: 50px; /* Reserves space for the player */
+}
+
+#main-wrapper {
+  flex-grow: 1;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+#left {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+#center {
+  display: block;
+  flex-grow: 0.7;
+  flex-shrink: 0.7;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  /* border: thin green solid; */
+  height: 100vh;
+}
+
+#right {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+#album-info-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  padding: 25px 0px 10px 0px;
+}
+
+#album-art{
+  display: block;
+  flex-grow: 0.3;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+#album-info{
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+#album-art img {
+  min-width: 200px; /* Ensures the width never goes below 200px */
+  max-width: 100%;  /* Prevents the image from exceeding the container width */
+  height: auto;     /* Maintains aspect ratio */
+  border: 2px solid #ffffff90;
+}
+
+#album-info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color:#fff;
+}
+
+#album-title{
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#tracks-info{
+  display: block;
+  font-size: 1.5rem;
+  color: #DDD;
+}
+
+#play-but-wrapper{
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  padding-top: 10px;
+}
+
+#playlist-wrapper{
+  scrollbar-width: none; /* For Firefox */
+  -webkit-box-shadow: inset 0px 37px 23px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 37px 23px -14px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 37px 23px -14px rgba(0,0,0,0.75);
+  overflow-y: auto; /* Enable vertical scrolling for playlist-wrapper */
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari, Edge) */
+#playlist-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.song-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  font-size: 1.5rem;
+  padding:15px;
+}
+
+.song-wrapper:hover {
+  background-color: rgba(255,255,255,0.1);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.song-number {
+  display: flex; /* Makes it a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100%; /* Ensures it spans the height of the row */
+}
+
+.song-title{
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin: 0px 20px 0px 20px;
+}
+
+.song-duration{
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+#top-bar-wrapper{
+  display: block;
+  padding: 15px;
+}
+
+#top-bar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: normal;
+  align-content: stretch;
+}
+
+.menu-item{
+  padding:0px 10px 0px 10px;
+  border-right: 1px solid #999;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(3) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(4) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  border: none;
+}
+
+#player {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgb(26 111 162 / 39%);
+  color: white;
+  border-radius: 30px;
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  min-height: 50px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+#player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+/* #player-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+#player-title{
+  padding: 0 20px;
+}
+
+#player-artist{
+  padding: 0 20px;
+}
+
+#player-info {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 33.333%;
+  padding-left: 10px;
+}
+
+#player-info img {
+  height: 60px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid #ffffff90;
+}
+
+#player-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#player-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 33.333%;
+}
+
+#player-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+#player-progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.player-button {
+  /* width: 40px;
+  height: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+#prev-button, #next-button {
+  background: none;
+}
+
+#prev-button img, #next-button img {
+  height: 20px;
+  width: auto;
+}
+
+/* Updated play button styling */
+#play-button img {
+  height: 30px;
+  width: auto;
+
+}
+
+#player-play-but-wrapper {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: thin solid rgba(255, 255, 255, 0.5); 
+  border-radius: 50%;
+}
+
+
+#progress-bar {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: white;
+}
+
+#player-right {
+  flex: 1;
+  max-width: 33.333%;
+  align-content: center;
+}
+
+#time-info {
+  /* align-self: flex-end; */
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.audio-meter {
+  display: flex;
+  gap: 2px;
+  height: 22px;
+  align-items: flex-end;
+  justify-content: center;
+  margin: auto; /* Centers within the parent */
+}
+
+.audio-meter .bar {
+  width: 4px;
+  height: 8px; /* Adjust this if you want shorter/longer bars */
+  background-color: white;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.audio-meter .bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.audio-meter .bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: scaleY(1);
+  }
+  50% {
+      transform: scaleY(1.5);
+  }
+}
+#volume-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icon and the fader */
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+#volume-icon {
+  height: 20px;
+  width: auto; /* Maintain aspect ratio */
+}
+
+#volume-fader {
+  width: 40%;
+  margin: 0;
+  appearance: none; /* Remove default browser styles */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  height: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+#volume-fader::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+#volume-fader::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+#volume-fader::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+#start-play-button {
+  padding: 3px 20px 5px 20px; 
+  background-color: #1a6fa2;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#start-play-button:hover {
+  background-color: #134f76;
+}
+
+#start-play-button:active {
+  background-color: #0f3e5e;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  /* Make page scrollable */
+  body {
+    overflow: auto;
+    height: auto; /* Remove fixed height */
+    background-color: rgba(0,88,134,1) ;
+}
+
+  #page {
+    overflow: auto;
+    background: linear-gradient(to bottom, transparent 0, #000212 340px);
+    min-height: 100vh; /* Use min-height instead of height */
+  }
+
+  #page-wrapper {
+    overflow: visible; /* Change from auto to visible */
+    padding-bottom: 80px; /* Adjust padding for player */
+    height: auto; /* Remove fixed height */
+  }
+
+  #main {
+    flex-direction: column;
+    height: auto; /* Remove fixed height */
+  }
+
+  #left, #right {
+    display: none;  /* Hide side columns on mobile */
+  }
+
+  #center {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;  /* Add some padding on the sides */
+  }
+
+  /* Adjust album info wrapper for vertical layout */
+  #playlist-wrapper {
+    height: auto !important; /* Override any inline styles */
+    overflow: visible; /* Change from auto to visible */
+    padding-bottom: 20px;
+  }
+
+  /* Adjust album info wrapper */
+  #album-info-wrapper {
+    position: relative; /* Remove any fixed positioning */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  /* Ensure player stays at bottom */
+  #player {
+    padding-bottom: calc(10px + var(--sab));
+    border-radius: 30px 30px 0 0; /* Remove bottom radius since it extends to bottom */
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin: 0;
+    flex-direction: column;
+    }
+  #page-wrapper {
+    padding-bottom: calc(80px + var(--sab)); /* Adjust padding for the player */
+  }
+
+  .player-button {
+    padding: 0px 50px;
+    }
+  /* Additional adjustments for smooth scrolling */
+  #album-art {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  #album-info {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  /* Remove any fixed heights from main containers */
+  #main-wrapper {
+    height: auto;
+  }
+
+  /* Hide album image in player */
+  #player-info img {
+    display: none;
+  }
+  #player-info {
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    }
+
+  /* Adjust player info text alignment */
+  #player-info-text {
+    font-weight: 600;
+  }
+
+  /* Hide volume controls */
+  #volume-wrapper {
+    display: none;
+  }
+
+  /* Make player controls more compact */
+  #player-controls {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+#player-buttons {
+    gap: 20%;
+  }
+
+  /* Adjust track list for better mobile viewing */
+  .song-wrapper {
+    padding: 12px 8px;
+  }
+
+  /* Ensure menu items are readable on mobile */
+  #top-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-item {
+    padding: 5px 10px;
+  }
+
+  /* Adjust font sizes for mobile */
+  #album-title {
+    font-size: 1.8rem;
+  }
+
+  #tracks-info {
+    font-size: 1.2rem;
+  }
+
+  .song-wrapper {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  #album-title {
+    font-size: 1.5rem;
+  }
+
+  #player-buttons {
+    gap: 10px;
+  }
+
+  .player-button {
+    width: 35px;
+    height: 35px;
+  }
+
+  #player-play-but-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
